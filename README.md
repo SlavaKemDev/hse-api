@@ -1,6 +1,6 @@
 # HSE API
 
-Python библиотека для работы с API мобильного приложения [HSE App X](https://app.hse.ru/).
+Python библиотека для работы с API мобильного приложения [HSE App X](https://apps.apple.com/us/app/hse-app-x/id1527320487).
 
 ## Описание
 
