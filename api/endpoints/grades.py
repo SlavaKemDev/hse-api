@@ -1,6 +1,7 @@
 from typing import Optional, Dict, Any
 from ..http import HttpClient
 from .. import config
+from ..models.grades import GradesResponse
 
 
 class GradesAPI:
@@ -16,4 +17,6 @@ class GradesAPI:
         if program_id:
             params["program_id"] = program_id
 
-        return self.http.get(config.url(config.API_V2_URL, "grades"), params=params)
+        raw = self.http.get(config.url(config.API_V2_URL, "grades"), params=params)
+
+        return GradesResponse.model_validate(raw)
