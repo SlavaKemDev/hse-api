@@ -93,10 +93,11 @@ class Account:
         )
 
 
-account = Account.auth(os.environ['email'], os.environ['password'])
-print(account.get_timetable())
-print(account.get_grades())
-print(account.get_cafes())
-print(account.get_cafe_info("64ed04c9411dc0b2e4890e42"))
-print(account.get_cafe_menu("64ed04c9411dc0b2e4890e42"))
+if __name__ == "__main__":
+    account = Account.auth(os.environ['email'], os.environ['password'])
+    print(account.get_timetable())
+    print(account.get_grades())
+    print(account.get_cafes())
+    print(account.get_cafe_info("64ed04c9411dc0b2e4890e42"))
+    print(account.get_cafe_menu("64ed04c9411dc0b2e4890e42"))
 
